@@ -1,0 +1,150 @@
+/* Body and header styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    padding-top: 60px;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+/* Header styling */
+header {
+    height: 60px; /* Adjust height as needed */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px; /* Adjust padding as needed */
+    position: fixed; /* Fix the header at the top */
+    top: 0; /* Align to the top of the viewport */
+    left: 0; /* Align to the left of the viewport */
+    right: 0; /* Align to the right of the viewport */
+    z-index: 1000; /* Ensure it stays on top of other content */
+    box-shadow: 0 0 5px black;
+}
+
+/* Main content styling */
+main {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Modal styling */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; 
+    z-index: 2000; 
+    left: 0;
+    top: 0; /* Start from the top */
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.5); 
+}
+
+/* Modal content */
+.modal-content {
+    background-color: #fefefe;
+    margin: 40px auto; /* Margin from the top */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Width of the modal */
+    max-width: 600px; /* Max width for larger screens */
+    position: relative; /* Position relative for close button */
+}
+
+/* Close button styling */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Button styling for add Owner */
+#addOwnerButton {
+    background-color: rgb(5, 130, 232); /* Change button color to blue */
+    color: white; /* Text color */
+}
+
+#addOwnerButton:hover {
+    background-color: rgb(4, 95, 175); /* Change button color to blue */
+    color: white; /* Text color */
+}
+
+/* Form container styling */
+form {
+    padding: 20px;
+}
+
+/* Label and input styling */
+label {
+    margin-bottom: 5px;
+    color: #555;
+}
+
+input {
+    display: block;
+    margin-bottom: 15px;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Button styling */
+button {
+    flex: 1; /* Make buttons take equal space */
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#closeButton {
+    background-color: #f44336; /* Red color for close button */
+    color: white; /* Text color */
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+button:nth-child(2) {
+    background-color: #4CAF50; /* Green color for create button */
+    color: white; /* Text color */
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Bus</title>
+    <link rel="stylesheet" href="/css/booking.css">
+</head>
+<body>
+    <div class="booking-container">
+        <h1>Book Bus</h1>
+
+        <div class="booking-details">
+            <p><strong>Source Location:</strong> <span id="source"></span></p><br>
+            <p><strong>Destination Location:</strong> <span id="destination"></span></p>
+
+            <hr>
+
+            <div class="row">
+                <p><strong>Departure Time:</strong> <span id="departureTime"></span></p>
+                <p><strong>Reaching Time:</strong> <span id="reachingTime"></span></p>
+            </div>
+
+            <div class="row">
+                <p><strong>Bus Number:</strong> <span id="busNumber"></span></p>
+                <p><strong>Seats Available:</strong> <span id="seatsAvailable"></span></p>
+            </div>
+
+            <div class="row">
+                <p><strong>Bus Type:</strong></p>
+                <select id="busType">
+                    <option value="AC Sleeper">AC Sleeper</option>
+                    <option value="Non AC Sleeper">Non AC Sleeper</option>
+                    <option value="AC Sitting">AC Sitting</option>
+                    <option value="Non AC Sitting">Non AC Sitting</option>
+                </select>
+                <p><strong>Fare:</strong> ₹<span id="fare"></span></p>
+            </div>
+
+            <button id="bookBusButton" onclick="openConfirmModal()">Book Bus</button>
+        </div>
+    </div>
+
+    <!-- Modal Structure -->
+    <div id="confirmModal" class="modal">
+        <div class="modal-content">
+            <h2>Confirm Details</h2>
+            <p><strong>Journey:</strong> <span id="modalSource"></span> → <span id="modalDestination"></span></p>
+            <p><strong>Number of Seats:</strong>
+                <input type="number" id="seatCount" min="1" max="10" value="1" onchange="calculateTotal()">
+            </p>
+            <p><strong>Total Fare:</strong> ₹<span id="totalFare"></span></p>
+            <button onclick="confirmOrder()">Confirm Order</button>
+        </div>
+    </div>
+
+    <script src="/js/booking.js"></script>
+</body>
+</html>

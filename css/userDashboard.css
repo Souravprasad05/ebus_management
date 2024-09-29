@@ -1,0 +1,285 @@
+/* *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} */
+/* General Body and Layout Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+}
+
+/* Fixed Header Styling */
+header {
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: #4CAF50;
+    box-shadow: 0 0 5px black;
+}
+
+/* Logout Button Styling */
+#logoutButton {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#logoutButton:hover {
+    background-color: white;
+    color: #4CAF50;
+}
+
+/* Main Dashboard Layout */
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    width: 96%;
+    margin-top: 70px; /* Offset for the fixed header */
+    padding: 20px; /* Add padding to container */
+    margin-right: 40px;
+}
+
+/* Dropdowns Container */
+.dropdowns-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+/* Dropdown Section Heading Styling */
+h3 {
+    margin: 20px 0; /* Margin around the heading */
+    font-size: 20px; /* Font size for the heading */
+    color: #333; /* Color for the heading */
+}
+
+/* Label Styling */
+label {
+    font-size: 16px; /* Font size for labels */
+    margin-right: 10px; /* Spacing between label and dropdown */
+    color: #333; /* Color for labels */
+}
+
+/* Dropdown Styling */
+select {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 0 10px; /* Spacing around dropdowns */
+    flex: 1; /* Equal width for dropdowns */
+}
+
+/* Arrow Styling */
+.arrow {
+    font-size: 24px; /* Size of the arrow */
+    margin: 0 10px; /* Spacing around arrow */
+}
+
+/* Search Button Styling */
+#search-button {
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    width: 120px;
+    height: 40px;
+    color: white;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .dashboard-container {
+        margin-top: 70px; /* Adjust margin for smaller screens */
+    }
+
+    .dropdowns-container {
+        flex-direction: column; /* Stack dropdowns on smaller screens */
+        align-items: stretch; /* Stretch to full width */
+    }
+
+    .arrow {
+        display: none; /* Hide arrow on smaller screens */
+    }
+}
+
+/* Style for the All Buses Section */
+.all-buses-section {
+    padding: 20px;
+    background-color: #f4f4f4; /* Light background color */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+/* Heading Style */
+.all-buses-section h3 {
+    text-align: left;
+    color: #333; /* Darker color for contrast */
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+/* Container for Bus Cards */
+.all-buses-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow cards to wrap to the next line */
+    justify-content: space-between; /* Space between cards */
+    gap: 20px; /* Space between cards */
+}
+
+/* Individual Bus Card Style */
+.bus-card {
+    background-color: #fff; /* White background for cards */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 8px; /* Rounded corners */
+    width: 32%; /* Increase width of card to 50% */
+    display: flex; /* Use flexbox for alignment */
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Left Div Style */
+/* Left Div Style */
+.left-div {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    padding: 10px; /* Inner padding */
+    flex: 60%; /* 60% of the card width */
+}
+
+/* Container for Image */
+.image-container {
+    display: flex; /* Keep images in the same line */
+    justify-content: center; /* Center the image horizontally */
+    margin-bottom: 5px; /* Space below the image */
+}
+
+/* Image Style in Left Div */
+.left-div img {
+    width: 30%; /* Set image width to 80% of left div */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px; /* Slightly round the corners */
+}
+
+
+/* Location and Timing Style */
+.location-timing {
+    display: flex; /* Align location and timing in a single line */
+    justify-content: space-between; /* Space between items */
+    margin-top: 5px; /* Space above */
+}
+
+/* Right Div Style */
+.right-div {
+    background-color: #28a745; /* Green background */
+    color: white; /* White text color */
+    padding: 15px; /* Inner padding */
+    flex: 75%; /* 40% of the card width */
+}
+
+/* Bus Card Title */
+.right-div h4 {
+    margin: 0; /* Remove default margin */
+}
+
+/* Button Style */
+.button {
+    margin-top: 10px; /* Space above the button */
+    background-color: #007bff; /* Primary button color */
+    color: #fff; /* White text color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px; /* Inner padding */
+    cursor: pointer; /* Pointer on hover */
+    transition: background-color 0.3s; /* Smooth color transition */
+}
+
+/* Button hover effect */
+.button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+/* Modal Styling */
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1001;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.close-button {
+    float: right;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Adjust button styles inside the modal */
+#bookBusButton {
+    margin-top: 20px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button {
+    /* Common button styles */
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    
+}
+
+button:hover {
+    background-color: #0e82ff; /* Darker shade for hover effect */
+}

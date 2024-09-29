@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="/css/adminDashboard.css">
+</head>
+<body>
+    <header >
+        <div><h2>Welcome Admin!</h2></div>
+        <div><button id="logoutButton">Logout</button></div>
+    </header>
+    <main>
+        <section id="createLoginSection">
+            <h3>Create Owner Login Credentials</h3>
+            <button id="addOwnerButton">Wants to add Owner?</button>
+        </section>
+        
+        <!-- Modal for creating Owner login -->
+        <div id="ownerModal" class="modal" style="display: none;">
+            <div class="modal-content">
+                <h3>Add Driver Information</h3> <!-- New heading -->
+                <form id="createLoginForm">
+                    <label for="ownerName">Name:</label>
+                    <input type="text" id="ownerName" required>
+                    
+                    <label for="ownerAge">Age:</label>
+                    <input type="number" id="ownerAge" required>
+                    
+                    <label for="licenseNumber">License Number:</label>
+                    <input type="text" id="licenseNumber" required>
+                    
+                    <label for="vehicleNumber">Vehicle Number:</label>
+                    <input type="text" id="vehicleNumber" required>
+                    
+                    <label for="contactNumber">Contact Number:</label>
+                    <input type="text" id="contactNumber" required>
+                    
+                    <label for="ownerEmail">Email:</label>
+                    <input type="email" id="ownerEmail" required>
+                    
+                    <label for="ownerPassword">Password:</label>
+                    <input type="password" id="ownerPassword" required>
+
+                    <button type="button" id="closeButton">Close</button>
+                    <button type="button" id="createOwnerBtn">Create Login</button>
+                </form>
+            </div>
+        </div>
+
+        <section id="loginTableSection">
+            <h3>Created Logins</h3>
+            <table id="loginTable">
+                <thead>
+                    <tr>
+                        <th>Sr No.</th>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>License Number</th>
+                        <th>Vehicle Number</th>
+                        <th>Contact Number</th>
+                        <th>Email</th>
+                        <th>Password</th>
+                    </tr>
+                </thead>
+                <tbody id="loginTableBody">
+                    <!-- Dynamic login entries will be inserted here -->
+                </tbody>
+            </table>
+        </section>
+
+        <!-- New Section for Registered Users Details -->
+        <section id="registeredUsersSection">
+            <h3>Registered Users Details</h3>
+            <table id="registeredUsersTable">
+                <thead>
+                    <tr>
+                        <th>Sr No.</th>
+                        <th>Name</th>
+                        <th>City</th>
+                        <th>Age</th>
+                        <th>Contact</th>
+                        <th>Email</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="registeredUsersTableBody">
+                    <!-- Sample user data for testing -->
+                    <tr>
+                        <td>1</td>
+                        <td>John Doe</td>
+                        <td>New York</td>
+                        <td>30</td>
+                        <td>1234567890</td>
+                        <td>johndoe@example.com</td>
+                        <td><button onclick="deleteUser(this)">Delete</button></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Jane Smith</td>
+                        <td>Los Angeles</td>
+                        <td>25</td>
+                        <td>0987654321</td>
+                        <td>janesmith@example.com</td>
+                        <td><button onclick="deleteUser(this)">Delete</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <script src="/js/adminDashboard.js" type="module"></script>
+</body>
+</html>

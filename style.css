@@ -1,0 +1,137 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header Styling */
+header {
+    background-color: #4CAF50;
+    height: 80px; /* Reduced height for a more compact header */
+    padding: 10px 20px; /* Reduced padding */
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+header .container {
+    max-width: 100%; /* Added max-width for better layout */
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Aligns items to the left and right */
+}
+
+.heading {
+    font-size: 24px; /* Increased header font size */
+    white-space: nowrap; /* Prevents text wrapping */
+}
+.mainContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    white-space: nowrap; /* Prevents text wrapping */
+}
+
+nav ul li {
+    margin: 0 15px;
+    padding-top: 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ddd;
+}
+
+/* Intro Section */
+.intro {
+
+    text-align: center;
+    padding: 30px 20px; /* Increased padding for better spacing */
+    background-color: white;
+    margin: 20px auto; /* Center the intro section */
+    max-width: 500px; /* Limit the width */
+    border-radius: 10px; /* Slightly more rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Added shadow for depth */
+    height: 92%;
+}
+
+.intro h2 {
+    font-size: 34px; /* Increased heading font size */
+    margin-bottom: 15px;
+    color: #4CAF50;
+}
+
+.intro p {
+    font-size: 24px; /* Increased paragraph font size */
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 20px; /* Increased padding */
+    background-color: #4CAF50;
+    color: white;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3); /* Shadow on top */
+}
+
+footer a {
+    color: white;
+    text-decoration: underline;
+}
+
+footer a:hover {
+    color: #ddd;
+}
+
+/* Carousel Adjustments */
+.carousel {
+    max-width: 65%; /* Full width carousel */
+    margin: 20px auto; /* Center the carousel */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 22px; /* Adjusted for smaller screens */
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+}

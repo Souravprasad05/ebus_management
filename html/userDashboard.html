@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <link rel="stylesheet" href="/css/userDashboard.css">
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div>
+            <h2>Welcome <span id="userName">User</span>!</h2>
+        </div>
+        <div>
+            <button id="myBookingsButton" onclick="location.href='/html/myBookings.html'">My Bookings</button>
+            <button id="logoutBtn">Logout</button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="dashboard-container">
+
+        <!-- Dropdowns Section -->
+        <h3>Search Your Bus</h3>
+        <div class="dropdowns-container">
+            <label for="firstDropdown">Source Location:</label>
+            <select id="firstDropdown" required>
+                <option value="" disabled selected>Select Source</option>
+                <option value="delhi">Delhi</option>
+                <option value="chennai">Chennai</option>
+                <option value="mumbai">Mumbai</option>
+                <option value="kolkata">Kolkata</option>
+            </select>
+
+            <div class="arrow">→</div>
+
+            <label for="secondDropdown">Destination Location:</label>
+            <select id="secondDropdown" required>
+                <option value="" disabled selected>Select Destination</option>
+                <option value="delhi">Delhi</option>
+                <option value="chennai">Chennai</option>
+                <option value="mumbai">Mumbai</option>
+                <option value="kolkata">Kolkata</option>
+            </select>
+
+            <button class="search-button" id="search-button" onclick="search()">Book Bus</button>
+        </div>
+    </div>
+
+    <!-- All Buses Section -->
+    <div class="all-buses-section">
+        <h3>All Buses</h3>
+        <div class="all-buses-container">
+            <div class="bus-card">
+                <div class="left-div">
+                    <div class="image-container">
+                        <img src="path/to/image.jpg" alt="Bus Image">
+                    </div>
+                    <div class="location-timing">
+                        <span class="location">Location</span>
+                        <span class="timing">Timing</span>
+                    </div>
+                </div>
+                <div class="right-div">
+                    <h4>Bus Title</h4>
+                    <p>Details about the bus.</p>
+                    <p>Route: A to B</p>
+                    <button class="button">Book Now</button>
+                </div>
+            </div>
+            <!-- Repeat .bus-card for other buses -->
+        </div>
+    </div>
+
+    </div>
+
+    <script src="/js/userDashboard.js" type="module"></script>
+</body>
+
+</html>

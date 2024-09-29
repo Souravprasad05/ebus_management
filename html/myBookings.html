@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Bookings</title>
+    <link rel="stylesheet" href="/css/myBookings.css">
+</head>
+
+<body>
+    <header>
+        <h1>My Bookings</h1>
+        <button onclick="goToDashboard()">Go Back to Dashboard</button>
+    </header>
+
+    <div class="booking-container" id="bookingContainer">
+        <!-- Sample booking card -->
+        <div class="ticketCard">
+            <div class="booking-card">
+                <div class="left-div">
+                    <h3>Source Location: <span class="value" id="sourceLocation">City A</span></h3>
+                    <h3>Destination Location: <span class="value" id="destinationLocation">City B</span></h3>
+                    <h3>Departure Time: <span class="value" id="departureTime">10:00 AM</span></h3>
+                    <h3>Journey Date: <span class="value" id="journeyDate">29 September, 2024</span></h3>
+
+                </div>
+                <div class="right-div">
+                    <h3>Bus Type: <span class="value" id="busType">AC Sleeper</span></h3>
+                    <h3>Bus Number: <span class="value" id="busNumber">1234</span></h3>
+                    <h3>Contact Number: <span class="value" id="contactNumber">9876543210</span></h3>
+                    <h3>Total Seats: <span class="value" id="totalSeats">3</span></h3>
+                </div>
+            </div>
+            <h3 class="total-amount">Total Amount Paid: ₹<span id="totalPaid">1500</span></h3>
+        </div>
+        <div class="ticketCard">
+            <div class="booking-card">
+                <div class="left-div">
+                    <h3>Source Location: <span class="value" id="sourceLocation">City A</span></h3>
+                    <h3>Destination Location: <span class="value" id="destinationLocation">City B</span></h3>
+                    <h3>Departure Time: <span class="value" id="departureTime">10:00 AM</span></h3>
+                    <h3>Journey Date: <span class="value" id="journeyDate">29 September, 2024</span></h3>
+
+                </div>
+                <div class="right-div">
+                    <h3>Bus Type: <span class="value" id="busType">AC Sleeper</span></h3>
+                    <h3>Bus Number: <span class="value" id="busNumber">1234</span></h3>
+                    <h3>Contact Number: <span class="value" id="contactNumber">9876543210</span></h3>
+                    <h3>Total Seats: <span class="value" id="totalSeats">3</span></h3>
+                </div>
+            </div>
+            <h3 class="total-amount">Total Amount Paid: ₹<span id="totalPaid">1500</span></h3>
+        </div>
+        <div class="ticketCard">
+            <div class="booking-card">
+                <div class="left-div">
+                    <h3>Source Location: <span class="value" id="sourceLocation">City A</span></h3>
+                    <h3>Destination Location: <span class="value" id="destinationLocation">City B</span></h3>
+                    <h3>Departure Time: <span class="value" id="departureTime">10:00 AM</span></h3>
+                    <h3>Journey Date: <span class="value" id="journeyDate">29 September, 2024</span></h3>
+
+                </div>
+                <div class="right-div">
+                    <h3>Bus Type: <span class="value" id="busType">AC Sleeper</span></h3>
+                    <h3>Bus Number: <span class="value" id="busNumber">1234</span></h3>
+                    <h3>Contact Number: <span class="value" id="contactNumber">9876543210</span></h3>
+                    <h3>Total Seats: <span class="value" id="totalSeats">3</span></h3>
+                </div>
+            </div>
+            <h3 class="total-amount">Total Amount Paid: ₹<span id="totalPaid">1500</span></h3>
+        </div>
+        <!-- Additional cards can be added here -->
+    </div>
+
+    <script src="/js/myBookings.js"></script>
+</body>
+
+</html>

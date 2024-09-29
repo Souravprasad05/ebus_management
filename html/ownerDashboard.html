@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Owner Dashboard</title>
+    <link rel="stylesheet" href="/css/ownerDashboard.css">
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div>
+            <h2>Welcome <span id="ownerName">Owner</span>!</h2>
+        </div>
+        <div><button id="logoutBtn">Logout</button></div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="dashboard-container">
+
+        <!-- Post Bus Information Section -->
+        <section id="postBusInfoSection">
+            <h3>Post Bus Information</h3>
+            <button id="postBusButton" >Post Bus Details</button>
+        </section>
+
+        <!-- Bus Table Section -->
+        <section id="busTableSection">
+            <h3>Your Buses</h3>
+            <table id="busTable">
+                <thead>
+                    <tr>
+                        <th>Bus No.</th>
+                        <th>Driver Name</th>
+                        <th>Source</th>
+                        <th>Destination</th>
+                        <th>Time Slot</th>
+                        <th>Bus Type</th>
+                        <th>No. of Seats</th>
+                        <th>Runs</th>
+                        <th>Fare</th>
+                    </tr>
+                </thead>
+                <tbody id="busTableBody">
+                    <!-- Dynamic bus entries will be inserted here -->
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Bookings Yet Section -->
+        <section id="bookingsYetSection" >
+            <h3>Bookings Yet</h3>
+
+            <!-- Total Amount Earned -->
+            <p>Total Amount Earned: ₹<span id="totalAmount">0</span></p>
+
+            <!-- Table for Bookings -->
+            <table id="bookingsTable">
+                <thead>
+                    <tr>
+                        <th>Bus No.</th>
+                        <th>Source</th>
+                        <th>Destination</th>
+                        <th>No. of Seats Booked</th>
+                        <th>Amount</th>
+                    </tr>
+                </thead>
+                <tbody id="bookingsTableBody">
+                    <!-- Dynamic Booking Entries will be inserted here -->
+                </tbody>
+            </table>
+        </section>
+    </div>
+
+    <!-- Modal for Posting Bus Information -->
+    <div id="busModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <h3>Add Bus Information</h3>
+            <form id="busForm">
+                <label for="busNo">Bus No:</label>
+                <input type="text" id="busNo" name="busNo" required>
+
+                <label for="driverName">Driver Name:</label>
+                <input type="text" id="driverName" name="driverName" required>
+
+                <label for="source">Source:</label>
+                <input type="text" id="source" name="source" required>
+
+                <label for="destination">Destination:</label>
+                <input type="text" id="destination" name="destination" required>
+
+                <label for="timeFrom">Time From:</label>
+                <input type="time" id="timeFrom" name="timeFrom" required>
+
+                <label for="timeTo">Time To:</label>
+                <input type="time" id="timeTo" name="timeTo" required>
+
+                <label for="busType">Bus Type:</label>
+                <select id="busType" name="busType" required>
+                    <option value="ac-sleeper">AC Sleeper</option>
+                    <option value="ac-seating">AC Seating</option>
+                    <option value="non-ac-sleeper">Non-AC Sleeper</option>
+                    <option value="non-ac-seating">Non-AC Seating</option>
+                </select>
+
+                <label for="noOfSeats">No. of Seats:</label>
+                <input type="number" id="noOfSeats" name="noOfSeats" required>
+
+                <label for="runs">Runs:</label>
+                <input type="text" id="runs" placeholder="Daily or specify days" required>
+
+                <label for="fare">Fare:</label>
+                <input type="number" id="fare" name="fare" required>
+
+                <div class="button-group">
+                    <button type="button" id="closeBtn" >Close</button>
+                    <button type="submit">Submit</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+    <script src="/js/ownerDashboard.js" type="module"></script>
+</body>
+
+</html>
